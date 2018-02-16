@@ -88,21 +88,13 @@
   <!-- font -->
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Great+Vibes" rel="stylesheet">
 
-  <style type="text/css">
-    body{
-      background-image: url('background.jpg')
-    }
-    #box{
-      background-color: rgba(255,255,255,0.6);
-      padding: 10%;
-    }
-  </style>
+  <?php include_once 'css_index_rehist.php' ?>
 </head>
 
 <body>
 
   <header id="header" class="">
-    <h1>The big Library</h1>
+    <h1>PHP Carrental</h1>
   </header><!-- /header -->
  <!--  <nav class="navbar navbar-dark bg-primary">
     <ul class="nav nav-pills">

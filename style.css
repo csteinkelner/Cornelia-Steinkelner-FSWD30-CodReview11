@@ -1,1 +1,59 @@
 /* style.css */
+body{
+	background-image: url('img/wien.jpeg');
+	background-size: 100%;
+}
+header{
+	background-color: #FDA400; /*FF7F00*/
+	min-height: 130px;
+	height: auto;
+	padding-top: 10px;
+	padding-left: 10%;
+}
+#hero{
+	background-image: url('img/slide3.jpg');
+	background-size: 100%;
+	min-height: 590px;
+	height: auto;
+	width: 100%;
+}
+.col-4{
+	text-align: center;
+	margin-top: 2%;
+}
+img{
+	height: 200px;
+	/* width: 100%; */
+}
+#special{
+	width: 100%;
+	height: auto;	
+}
+.box{
+	background-color: rgba(255,255,255,0.5);
+	margin: 5px;
+	padding: 5px;
+	padding-top: 20px;
+	color: black;
+	min-height: 450px;
+	border-radius: 20px;
+}
+/* TABLE_______________________________________ */
+table{
+	margin-top: 20px;
+}
+th{
+	background-color: #FFDF00;
+}
+td{
+	background-color: rgba(255,255,255,0.6);
+}
+/* FOOTER_________________________ */
+footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 60px; /* Set the fixed height of the footer here */
+	background-color: #FDA400;
+	text-align: center;
+}

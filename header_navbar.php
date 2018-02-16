@@ -29,36 +29,36 @@
 	<header id="header" class="">
 		<h1>Welcome to our Carrental survice, <?php echo $customerRow['customerName']; ?>!</h1>
 
+		<div class="row">
+			<div class="col-md-5 col-lg-4 col-5 col-md-offset-8 col-offset-8">
+						
+				<ul class="nav nav-pills">
+					<li><a href="home.php">Home</a></li>
+					<!-- <li><a href="cars_list.php">Cars</a></li> -->
+					<li><a href="office_list.php">Offices</a></li>
+					<li>
+						<div class="dropdown">
+					        <button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					          Cars
+								<span class="caret"></span>
+					        </button>
+						        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						        	<li><a href="cars_list.php">Carlist</a></li>
+						        	<li>
+						        		<a href="cars_locations.php">Where they are right now</a>
+						        	</li>
+						        	<li role="separator" class="divider"></li>
+						        </ul>
+						</div>
+					</li>
+					<li>
+						<button class="btn">
+							<a href="logout.php?logout">Sign Out</a>
+						</button>
+					</li>
 
+		  		</ul>
+		  	</div>
+		</div>
 	</header><!-- /header -->
-	<div class="row">
-		<div class="col-md-5 col-lg-4 col-5 col-md-offset-8 col-offset-8">
-					
-			<ul class="nav nav-pills">
-				<li><a href="home.php">Home</a></li>
-				<!-- <li><a href="cars_list.php">Cars</a></li> -->
-				<li><a href="office_list.php">Offices</a></li>
-				<li>
-					<div class="dropdown">
-				        <button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				          Cars
-							<span class="caret"></span>
-				        </button>
-					        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-					        	<li><a href="cars_list.php">Carlist</a></li>
-					        	<li>
-					        		<a href="cars_locations.php">Where they are right now</a>
-					        	</li>
-					        	<li role="separator" class="divider"></li>
-					        </ul>
-					</div>
-				</li>
-				<li>
-					<button class="btn">
-						<a href="logout.php?logout">Sign Out</a>
-					</button>
-				</li>
-
-	  		</ul>
-	  	</div>
-	</div>
+	

@@ -36,6 +36,8 @@
 	$cars6 = "SELECT COUNT(*) FROM `car` WHERE fk_location_id = 6";
 
 	$cars1_result = mysqli_query($conn, $cars1);
+	// $row1 = mysql_fetch_assoc($cars1_result);
+	// echo $row1[car];
 
 	include_once 'header_navbar.php'
 ?>
@@ -82,13 +84,14 @@
 				</thead>
 				<tbody>	
 					<tr>
-						<td scope='row'><?php $location_result ?></td>
-						<td><?php $cars1_result ?></td>
+						<td scope='row'><?php  $location_result ?></td>
+						<td><?php echo $row1 ?></td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 	</div>
+	<?php include_once 'footer.php' ?>
 </body>
 </html>
 
