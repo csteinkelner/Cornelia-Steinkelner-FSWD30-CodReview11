@@ -26,36 +26,7 @@
 		
 
 	<div class="container">
-		<div class="table-responsive">
-			
-			<table class="table">
-				<thead>
-					<tr>
-						<th scope="col">ID</th>
-						<th scope="col">Model</th>
-						<th scope="col">Status</th>
-						<th scope="col">Location</th>
-						<th scope="col">Office</th>
-					</tr>
-				</thead>
-				<tbody>
-					<?php 
-						while ($row = mysqli_fetch_assoc($result)) {
-							echo 
-								" 
-								<tr>
-									<td scope='row'>".$row["car_id"]."</td>
-									<td>".$row["fk_cartype_id"]."</td>
-									<td>".$row["fk_status_id"]."</td>
-									<td>".$row["fk_location_id"]."</td>
-									<td>".$row["fk_office_id"]."</td>
-								</tr>
-								";
-						};
-					?>
-				</tbody>
-			</table>
-		</div>
+		
 	</div>
 </body>
 </html>
