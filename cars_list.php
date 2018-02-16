@@ -14,11 +14,22 @@
 
 	$customerRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
 
-	$sql = "SELECT * FROM car";
-	// $sql = "SELECT name FROM author_interpret";
-	// $sql = "SELECT name FROM publisher";
-	// $sql = "SELECT type FROM type";
-	$result = mysqli_query($conn, $sql);
+	// $sql = "SELECT * FROM car
+	// 	LEFT JOIN cartype ON type_id = fk_cartype_id
+	// 	LEFT JOIN car_location ON location_id = fk_location_id
+	// 	LEFT JOIN car_status ON status_id = fk_status_id
+	// 	LEFT JOIN office ON office_id = fk_office_id
+	// 	ORDER BY car_id
+	// 	";
+
+	$allcars = "SELECT * FROM car
+				LEFT JOIN cartype ON car.fk_cartype_id = cartype.cartype_id
+				LEFT JOIN car_status ON car.fk_status_id = car_status.status_id
+				-- LEFT JOIN car_location ON car.fk_location_id = car_location.location_id
+				LEFT JOIN office ON car.fk_office_id = office.office_id
+				";
+
+	$result = mysqli_query($conn, $allcars);
 
 	include_once 'header_navbar.php'
 ?>
@@ -33,9 +44,9 @@
 					<tr>
 						<th scope="col">ID</th>
 						<th scope="col">Model</th>
-						<th scope="col">Status</th>
-						<th scope="col">Location</th>
+						<!-- <th scope="col">Location</th> -->
 						<th scope="col">Office</th>
+						<th scope="col">Status</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -45,10 +56,9 @@
 								" 
 								<tr>
 									<td scope='row'>".$row["car_id"]."</td>
-									<td>".$row["fk_cartype_id"]."</td>
-									<td>".$row["fk_status_id"]."</td>
-									<td>".$row["fk_location_id"]."</td>
-									<td>".$row["fk_office_id"]."</td>
+									<td>".$row["type"]."</td>
+									<td>".$row["address"]."</td>
+									<td>".$row["car_status"]."</td>
 								</tr>
 								";
 						};
