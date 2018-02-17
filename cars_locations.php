@@ -23,23 +23,21 @@
 	$result = mysqli_query($conn, $allcars);
 
 // select the locations with the coresponding number of cars
+	$location_cars="SELECT car_location.location_id,
+				car_location.location,
+				COUNT(car.car_id) as nRows 
+				FROM car_location 
+				LEFT OUTER JOIN car
+				ON car_location.location_id = car.fk_location_id
+				#WHERE car_location.location_id = 1
+				GROUP BY car_location.location_id,
+				car_location.location";
 
-	$location = "SELECT * FROM car_location";
 
-	$location_result = mysqli_query($conn, $location);
+	$location_result = mysqli_query($conn, $location_cars);
+	
 
-	$cars1 = "SELECT COUNT(*) FROM `car` WHERE fk_location_id = 1";
-	$cars2 = "SELECT COUNT(*) FROM `car` WHERE fk_location_id = 2";
-	$cars3 = "SELECT COUNT(*) FROM `car` WHERE fk_location_id = 3";
-	$cars4 = "SELECT COUNT(*) FROM `car` WHERE fk_location_id = 4";
-	$cars5 = "SELECT COUNT(*) FROM `car` WHERE fk_location_id = 5";
-	$cars6 = "SELECT COUNT(*) FROM `car` WHERE fk_location_id = 6";
-
-	$cars1_result = mysqli_query($conn, $cars1);
-	// $row1 = mysql_fetch_assoc($cars1_result);
-	// echo $row1[car];
-
-	include_once 'header_navbar.php'
+	include_once 'parts/header_navbar.php'
 ?>
 
 		
@@ -78,20 +76,29 @@
 			<table class="table">
 				<thead>
 					<tr>
+						<th scope="col">ID</th>
 						<th scope="col">Location</th>
 						<th scope="col">Cars there right now</th>
 					</tr>
 				</thead>
 				<tbody>	
-					<tr>
-						<td scope='row'><?php  $location_result ?></td>
-						<td><?php echo $row1 ?></td>
-					</tr>
+					<?php 
+						while ($local_row = mysqli_fetch_assoc($location_result)) {
+							echo 
+								" 
+								<tr>
+									<td scope='row'>".$local_row["location_id"]."</td>
+									<td>".$local_row["location"]."</td>
+									<td>".$local_row["nRows"]."</td>
+								</tr>
+								";
+						};
+					?>
 				</tbody>
 			</table>
 		</div>
 	</div>
-	<?php include_once 'footer.php' ?>
+	<?php include_once 'parts/footer.php' ?>
 </body>
 </html>
 

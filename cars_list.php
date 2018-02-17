@@ -31,7 +31,7 @@
 
 	$result = mysqli_query($conn, $allcars);
 
-	include_once 'header_navbar.php'
+	include_once 'parts/header_navbar.php'
 ?>
 
 		
@@ -67,7 +67,7 @@
 			</table>
 		</div>
 	</div>
-	<?php include_once 'footer.php' ?>
+	<?php include_once 'parts/footer.php' ?>
 </body>
 </html>
 

@@ -20,7 +20,7 @@
 	// $sql = "SELECT type FROM type";
 	$result = mysqli_query($conn, $sql);
 
-	include_once 'header_navbar.php'
+	include_once 'parts/header_navbar.php'
 ?>
 <div id="hero">
 	<div class="row">
@@ -60,7 +60,7 @@
 			</div>
 		</div>
 	</div> -->
-	<?php include_once 'footer.php' ?>
+	<?php include_once 'parts/footer.php' ?>
 </body>
 </html>
 

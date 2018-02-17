@@ -2,6 +2,7 @@
 body{
 	background-image: url('img/wien.jpeg');
 	background-size: 100%;
+	padding-bottom: 70px;
 }
 header{
 	background-color: #FDA400; /*FF7F00*/
@@ -9,6 +10,10 @@ header{
 	height: auto;
 	padding-top: 10px;
 	padding-left: 10%;
+}
+header h1{
+	font-family: 'Anton', sans-serif;
+	font-size: 300%;
 }
 #hero{
 	background-image: url('img/slide3.jpg');

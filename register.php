@@ -109,9 +109,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- font -->
-  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Great+Vibes" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
 
-  <?php include_once 'css_index_rehist.php' ?>
+  <?php include_once 'parts/css_index_rehist.php' ?>
 
 </head>
 <body>

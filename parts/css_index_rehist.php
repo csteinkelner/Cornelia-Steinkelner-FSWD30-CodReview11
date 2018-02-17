@@ -1,4 +1,7 @@
 <style type="text/css">
+	header{
+		padding-left: 40%;
+	}
     body{
       background-image: url('img/road2.jpg');
       background-size: 100%;
